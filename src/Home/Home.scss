@@ -1,0 +1,53 @@
+@import "./../Styles/Mixin_New.scss";
+
+.home-main {
+    width: 100%;
+    // height: 100%;
+    overflow: hidden;
+}
+
+.left {
+    width: 90px;
+    // height: 100vh;
+    // background: red;
+
+    @include respond-to(xl) {
+        width: 280px;
+        // background: red;
+    }
+
+    @include respond-to(xs) {
+        display: none;
+    }
+}
+
+.add-contaienr {
+    border-radius: 10px;
+    width: 100%;
+    background: whitesmoke;
+    padding: 1rem;
+    color: black;
+    margin: 1rem;
+
+    .add-div {
+        display: flex;
+        align-items: center;
+
+        @include respond-to(xs) {
+            flex-direction: column;
+        }
+    }
+
+    .add-logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: "center";
+
+        @include respond-to(xs) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+}

@@ -1,0 +1,222 @@
+@import "./../Styles/Mixin_New.scss";
+
+.navbar-container {
+    width: 100%;
+    height: 55px;
+    background: #151515;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0 1rem;
+    overflow: hidden;
+
+    .loading-div {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .progress-bar {
+            // width: 100%;
+            background: red;
+            transition: 0.8s ease-in-out;
+        }
+
+        .progress {
+            transition: 0.8s ease-in-out;
+            // width: 100%;
+            background: #151515;
+        }
+    }
+}
+
+.navbar-main {
+    display: flex;
+    align-items: center;
+    // padding: 1rem;
+    position: relative;
+    height: 100%;
+
+    .navbar-name {
+        font-size: 18px;
+    }
+
+    .navbar-icon {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        object-position: "center";
+
+        @include respond-to(xs) {
+            display: none;
+        }
+    }
+
+    .menu {
+        font-size: 32px;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+    .nav-input-div {
+        flex: 1;
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 30px;
+
+        .nav-search-div {
+            width: 100%;
+            max-width: 500px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            background-color: #222222;
+            border-radius: 30px;
+
+            @include respond-to(xs) {
+                background-color: transparent;
+                border-radius: 0px;
+            }
+
+            .nav-search {
+                width: 100%;
+                border-radius: 20px 0 0px 20px;
+                padding-inline-start: 10px;
+                border: 1px solid #222222;
+                outline: none;
+                background-color: #151515;
+                color: white;
+                height: 100%;
+
+                @include respond-to(xs) {
+                    display: none;
+                }
+            }
+
+            .nav-search-icon {
+                font-size: 22px;
+                margin-left: 1rem;
+                margin-right: 1rem;
+
+            }
+        }
+
+        .microfone-icon {
+            padding: 8px;
+            border-radius: 50%;
+            font-size: 37px;
+            background-color: #222222;
+            margin-left: 1rem;
+        }
+    }
+
+    .add-video-div {
+        width: 100%;
+        max-width: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        .nav-user-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .add-video-opt {
+            position: absolute;
+            top: 40px;
+            left: -60%;
+            width: 100%;
+            max-width: 200px;
+            border-radius: 5px;
+            height: 90px;
+            background: #222222;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .add-video-opt-inner {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+
+                &:hover {
+                    background: red;
+                }
+
+                .add-video-opt-icon {
+                    font-size: 18px;
+                    margin-right: 10px;
+                }
+
+                .add-video-opt-name {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.vchat-login-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .vchat-login-card {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        background: #222222;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .close-v {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .vlogo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        .vchat-form {
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .vchat-input {
+            margin: 0.8rem 0;
+            width: 100%;
+            border-radius: 30px;
+            height: 35px;
+            padding-inline-start: 10px;
+            border: none;
+            outline: none;
+        }
+    }
+}

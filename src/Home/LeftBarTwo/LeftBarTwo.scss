@@ -1,0 +1,52 @@
+@import "./../../Styles/Mixin_New.scss";
+
+.left-mainTwo {
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    padding: 1rem;
+    display: block;
+    z-index: 2;
+
+    @include respond-to(xs) {
+        display: none;
+    }
+
+    @include respond-to(xl) {
+        display: none;
+    }
+
+    .left-icon-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.3rem 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+
+        &:hover {
+            background: gray;
+        }
+
+        .left-icon-name {
+            font-size: 14px;
+        }
+
+        .left-icon-wrapper {
+            width: auto;
+
+            @include respond-to(xl) {
+                width: 50px;
+            }
+
+            .left-icon {
+                font-size: 24px;
+            }
+        }
+
+    }
+
+
+}

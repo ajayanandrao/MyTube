@@ -1,0 +1,305 @@
+@import "./../Styles/Mixin_New.scss";
+
+.leftShot {
+    width: 90px;
+    // height: 100vh;
+    // background: red;
+
+    @include respond-to(xl) {
+        width: 280px;
+        // background: red;
+    }
+
+    @include respond-to(xs) {
+        display: none;
+    }
+}
+
+.center-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: calc(100vh - 55px);
+    scroll-snap-type: both mandatory; //proximity, mandatory 
+    aspect-ratio: 1/1;
+    overflow-y: scroll;
+    white-space: nowrap;
+    -webkit-scroll-snap-type: both mandatory;
+    position: relative;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .glass-center-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: calc(100vh - 55px);
+        scroll-snap-type: both mandatory; //proximity, mandatory 
+        aspect-ratio: 1/1;
+        overflow-y: scroll;
+        white-space: nowrap;
+        -webkit-scroll-snap-type: both mandatory;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        backdrop-filter: blur(130px);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+    }
+}
+
+.reel-scroll-div {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    height: calc(100vh - 55px);
+    scrollbar-width: none;
+    scroll-snap-align: center;
+    aspect-ratio: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+    padding: 0.5rem 0;
+    position: relative;
+    // border: 1px solid white;
+
+
+    @include respond-to(xs) {
+        height: calc(100vh - 55px);
+        max-width: 300px;
+    }
+
+    @include respond-to(xss) {
+        height: calc(100vh - 55px);
+        max-width: 450px;
+    }
+
+    .comment-div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -46px;
+        z-index: 2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .comment-div-inner {
+            width: 100%;
+            height: 100%;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            background: #151515;
+            position: relative;
+            padding: 1.5rem 1rem;
+
+            @include respond-to(xs){
+                max-height: 100%;
+            }
+        }
+
+        .com-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .user-com-div {
+            display: flex;
+            margin: 1rem 0;
+
+            .user-com-icon {
+                width: 35px;
+                height: 35px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+
+            .user-com-name-div {
+                margin-left: 1rem;
+                width: 100%;
+                flex-wrap: wrap;
+                display: inline-flex;
+                position: relative;
+
+                .user-con-close {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    cursor: pointer;
+                }
+
+                .use-comment {
+                    overflow: hidden;
+                    white-space: wrap;
+                    text-overflow: ellipsis;
+                    line-height: 20px;
+                    font-size: 14px;
+                    padding-right: 1rem;
+                }
+            }
+
+            .user-com-name {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        .com-input-div {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #151515;
+
+            .com-input {
+                width: 100%;
+                max-width: 300px;
+                height: 35px;
+                padding-inline-start: 10px;
+                border: 1px solid #ccc;
+                border-radius: 30px;
+                background: #272727;
+                color: white;
+                outline: none;
+            }
+
+            .com-send-icon {
+                font-size: 35px;
+                margin: 0 0.5rem;
+            }
+        }
+
+        @include respond-to(xs) {
+            left: 0;
+        }
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-100%, -50%);
+        z-index: 1;
+        font-size: 30px;
+        cursor: pointer;
+
+        @include respond-to(xs) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .short-video-option-div {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+
+        @include respond-to(xs) {
+            height: calc(100vh - 55px);
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            justify-content: center;
+        }
+
+        .short-video-option-warapper {
+            margin: 1rem 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include respond-to(xs) {
+                margin: 1rem 0;
+                padding-left: 0;
+            }
+
+            // background-color: red;
+            .short-video-optin-name {
+                font-size: 14px;
+                margin-top: 5px;
+            }
+
+            .short-video-option-icon-div {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #272727;
+                cursor: pointer;
+                object-fit: cover;
+                object-position: center;
+
+                @include respond-to(xs) {
+                    background-color: rgba(0, 0, 0, 0.315);
+                    backdrop-filter: blur(10px);
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .short-video-option-icon {
+                    font-size: 24px;
+
+                    @include respond-to(xs) {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.video-short {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    @include respond-to(xl) {
+        height: 100%;
+        max-height: 600px;
+    }
+
+    @include respond-to(lg) {
+        height: 100%;
+        max-height: 600px;
+    }
+
+    @include respond-to(md) {
+        height: 100%;
+        max-height: 600px;
+    }
+
+    @include respond-to(sm) {
+        height: 100%;
+        max-height: 600px;
+    }
+
+}

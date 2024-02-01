@@ -1,0 +1,143 @@
+@import "./../../Styles/Mixin_New.scss";
+
+.left {
+    width: 90px;
+    // height: 100%;
+
+    @include respond-to(xl) {
+        width: 280px;
+    }
+
+    @include respond-to(xs) {
+        display: none;
+    }
+}
+
+.short-div {
+    width: 100%;
+    margin: 0 auto;
+    @include respond-to(md) {
+        height: auto;   
+    }
+
+    .short-div-title {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+        .short-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 1rem;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    .short-more {
+        margin: 0 auto;
+        margin-top: 1rem;
+        width: 100%;
+        height: 35px;
+        max-width: 130px;
+        border-radius: 30px;
+        border: 1px solid #999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .down-icon {
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.short-main {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 1rem;
+    height: auto;
+
+    @include respond-to(1268) {
+        grid-template-columns: repeat(4, 1fr);
+        height: auto;
+    }
+
+    @include respond-to(993) {
+        grid-template-columns: repeat(3, 1fr);
+        height: auto;
+    }
+
+    @include respond-to(md) {
+        height: auto;   
+    }
+    @include respond-to(sm) {
+        height: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond-to(xs) {
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .short-card {
+        width: 100%;
+        height: 350px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-position: "center";
+        border-radius: 10px;
+        position: relative;
+        transition: 0.4s ease-in-out;
+        cursor: pointer;
+
+
+
+        @include respond-to(sm) {
+            height: 300px;
+        }
+
+        @include respond-to(690) {
+            height: 280px;
+        }
+
+        @include respond-to(xs) {
+            height: 280px;
+        }
+
+        &:hover {
+            transform: scale(95%);
+            
+            @include respond-to(xs) {
+                transform: scale(100%);
+            }
+
+            @include respond-to(sm) {
+                transform: scale(100%);
+            }
+
+            .short-card-video {
+                opacity: 100%;
+            }
+        }
+
+        .short-card-video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+            cursor: pointer;
+
+        }
+    }
+}
