@@ -1,6 +1,6 @@
 {
-  "homepage": "http://ajayanandrao02.github.io/my-profile",
-  "name": "profile",
+  "homepage": "http://ajayanandrao02.github.io/MyTube",
+  "name": "MyTube",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

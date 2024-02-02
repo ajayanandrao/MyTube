@@ -8,7 +8,7 @@ import ShortVideo from "./ShortVideo/ShortVideo";
 function App() {
   return (
     <>
-      <Router basename="/my-profile"> 
+      <Router basename="/MyTube"> 
         <ScrollToTop />
         <Navbar />
         <Routes>
