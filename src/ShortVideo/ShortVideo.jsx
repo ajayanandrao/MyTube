@@ -39,16 +39,16 @@ import { IoClose } from "react-icons/io5";
 
 const ShortVideo = () => {
     const shortData = [
-        { id: 1, img: oneimg, video: one },
-        { id: 2, img: twoimg, video: two },
-        { id: 3, img: threeimg, video: three },
-        { id: 4, img: fourimg, video: four },
-        { id: 5, img: fiveimg, video: five },
-        { id: 6, img: siximg, video: six },
-        { id: 7, img: savenimg, video: sevan },
-        { id: 8, img: eatimg, video: eat },
-        { id: 9, img: eatimg, video: nine },
-        { id: 10, img: eatimg, video: ten },
+        { id: 1, img: oneimg, video: one, like: 421 },
+        { id: 2, img: twoimg, video: two, like: 985 },
+        { id: 3, img: threeimg, video: three, like: 543 },
+        { id: 4, img: fourimg, video: four, like: 235 },
+        { id: 5, img: fiveimg, video: five, like: 102 },
+        { id: 6, img: siximg, video: six, like: 69 },
+        { id: 7, img: savenimg, video: sevan, like: 21 },
+        { id: 8, img: eatimg, video: eat, like: 78 },
+        { id: 9, img: eatimg, video: nine, like: 685 },
+        { id: 10, img: eatimg, video: ten, like: 321 },
     ];
     const [isPlaying, setIsPlaying] = useState(false);
     const videoRefs = useRef(shortData.map(() => createRef()));
@@ -151,7 +151,7 @@ const ShortVideo = () => {
         setCom(!com);
     }
     const comCloseOff = (index) => {
-    
+
         setIsOn(true)
         const videoRef = videoRefs.current[index];
 
@@ -299,7 +299,7 @@ const ShortVideo = () => {
                                                 style={{ background: `${like == true ? "red" : "#272727"}` }}>
                                                 <AiFillLike className='short-video-option-icon' />
                                             </div>
-                                            <span className='short-video-optin-name'>Like</span>
+                                            <span className='short-video-optin-name'> {like ? post.like + 1 : post.like}k</span>
                                         </div>
 
                                         <div className='short-video-option-warapper'>
