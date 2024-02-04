@@ -61,6 +61,7 @@ const ShortVideo = () => {
         shortData.unshift(shortData.splice(selectedIndex, 1)[0]);
     }
 
+
     useEffect(() => {
         if (id) {
             setIsPlaying(false);
@@ -106,6 +107,7 @@ const ShortVideo = () => {
 
                         if (entry.isIntersecting) {
                             target.play();
+                            setIsOn(false)
                             setIsPlaying(true);
                         } else {
                             target.pause();
