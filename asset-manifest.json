@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyTube/static/css/main.dfbb903a.css",
-    "main.js": "/MyTube/static/js/main.e7182e79.js",
+    "main.js": "/MyTube/static/js/main.b776bddf.js",
     "static/js/787.211b7f91.chunk.js": "/MyTube/static/js/787.211b7f91.chunk.js",
     "static/media/Coding Challenge 180_ Falling Sand.mp4": "/MyTube/static/media/Coding Challenge 180_ Falling Sand.227cf3276900c50c9997.mp4",
     "static/media/SHE DESTROYED 26 PLAYERS .mp4": "/MyTube/static/media/SHE DESTROYED 26 PLAYERS .9f961e543c1067041258.mp4",
@@ -35,11 +35,11 @@
     "static/media/logo192.png": "/MyTube/static/media/logo192.052f2e1cfd165966b477.png",
     "index.html": "/MyTube/index.html",
     "main.dfbb903a.css.map": "/MyTube/static/css/main.dfbb903a.css.map",
-    "main.e7182e79.js.map": "/MyTube/static/js/main.e7182e79.js.map",
+    "main.b776bddf.js.map": "/MyTube/static/js/main.b776bddf.js.map",
     "787.211b7f91.chunk.js.map": "/MyTube/static/js/787.211b7f91.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dfbb903a.css",
-    "static/js/main.e7182e79.js"
+    "static/js/main.b776bddf.js"
   ]
 }
