@@ -200,6 +200,7 @@ const VComponentOne = () => {
                                     <div key={item.id}>
                                         <div onClick={() => handleShortOn(item.id)} >
                                             <div className="video-card-div">
+                                                
                                                 <div className="video-card" style={{ backgroundImage: `url(${item.thumbnel})` }}
                                                     onMouseOver={() => handleMouseOver(index)}
                                                     onMouseOut={() => handleMouseOut(index)}
