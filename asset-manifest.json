@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MyTube/static/css/main.8d6846be.css",
+    "main.css": "/MyTube/static/css/main.9cc7bbe6.css",
     "main.js": "/MyTube/static/js/main.b776bddf.js",
     "static/js/787.211b7f91.chunk.js": "/MyTube/static/js/787.211b7f91.chunk.js",
     "static/media/Coding Challenge 180_ Falling Sand.mp4": "/MyTube/static/media/Coding Challenge 180_ Falling Sand.227cf3276900c50c9997.mp4",
@@ -34,12 +34,12 @@
     "static/media/five.png": "/MyTube/static/media/five.30324823d80ce27a7e4d.png",
     "static/media/logo192.png": "/MyTube/static/media/logo192.052f2e1cfd165966b477.png",
     "index.html": "/MyTube/index.html",
-    "main.8d6846be.css.map": "/MyTube/static/css/main.8d6846be.css.map",
+    "main.9cc7bbe6.css.map": "/MyTube/static/css/main.9cc7bbe6.css.map",
     "main.b776bddf.js.map": "/MyTube/static/js/main.b776bddf.js.map",
     "787.211b7f91.chunk.js.map": "/MyTube/static/js/787.211b7f91.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d6846be.css",
+    "static/css/main.9cc7bbe6.css",
     "static/js/main.b776bddf.js"
   ]
 }
